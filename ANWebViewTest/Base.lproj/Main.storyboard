@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES" initialViewController="dGC-1r-IUO">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Start View Controller-->
+        <scene sceneID="xL5-5i-gPA">
+            <objects>
+                <viewController id="dGC-1r-IUO" customClass="ANStartViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="4hD-oa-s1a"/>
+                        <viewControllerLayoutGuide type="bottom" id="asH-6J-yz4"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="dbA-M0-XL9">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="right" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="hF5-rp-PGh">
+                                <rect key="frame" x="16" y="62" width="207" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Ybw-Sj-00n"/>
+                                    <constraint firstAttribute="width" constant="207" id="tvS-kS-kl2"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" returnKeyType="go"/>
+                                <connections>
+                                    <outlet property="delegate" destination="dGC-1r-IUO" id="A7d-nv-ldZ"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KOd-ZI-Y62">
+                                <rect key="frame" x="292" y="62" width="67" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="lUU-pm-4jH"/>
+                                </constraints>
+                                <state key="normal" title="Показать"/>
+                                <connections>
+                                    <action selector="actionGo:" destination="dGC-1r-IUO" eventType="touchUpInside" id="qGO-Ag-taF"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6dd-AS-tRf">
+                                <rect key="frame" x="0.0" y="114" width="375" height="553"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Введите номер вакансии:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vcP-Af-0gR">
+                                <rect key="frame" x="16" y="28" width="207" height="26"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="207" id="Skm-FJ-rYo"/>
+                                    <constraint firstAttribute="height" constant="26" id="WGR-Oe-chQ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="asH-6J-yz4" firstAttribute="top" secondItem="6dd-AS-tRf" secondAttribute="bottom" id="AnE-nj-pMQ"/>
+                            <constraint firstItem="hF5-rp-PGh" firstAttribute="top" secondItem="vcP-Af-0gR" secondAttribute="bottom" constant="8" id="HgZ-RO-txD"/>
+                            <constraint firstItem="hF5-rp-PGh" firstAttribute="leading" secondItem="dbA-M0-XL9" secondAttribute="leadingMargin" id="OnO-Jk-Rf6"/>
+                            <constraint firstItem="KOd-ZI-Y62" firstAttribute="top" secondItem="4hD-oa-s1a" secondAttribute="bottom" constant="42" id="QNc-1y-qB6"/>
+                            <constraint firstItem="KOd-ZI-Y62" firstAttribute="leading" secondItem="hF5-rp-PGh" secondAttribute="trailing" constant="69" id="oKv-zX-d59"/>
+                            <constraint firstAttribute="trailing" secondItem="6dd-AS-tRf" secondAttribute="trailing" id="oX0-Xm-gFr"/>
+                            <constraint firstItem="vcP-Af-0gR" firstAttribute="leading" secondItem="dbA-M0-XL9" secondAttribute="leadingMargin" id="of1-UA-AKL"/>
+                            <constraint firstItem="6dd-AS-tRf" firstAttribute="top" secondItem="hF5-rp-PGh" secondAttribute="bottom" constant="22" id="saI-wL-9bH"/>
+                            <constraint firstItem="6dd-AS-tRf" firstAttribute="leading" secondItem="dbA-M0-XL9" secondAttribute="leading" id="wVm-kv-vAs"/>
+                            <constraint firstItem="vcP-Af-0gR" firstAttribute="top" secondItem="4hD-oa-s1a" secondAttribute="bottom" constant="8" id="yv5-Ao-4di"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="buttonGo" destination="KOd-ZI-Y62" id="zYX-z4-gvo"/>
+                        <outlet property="textJobNamber" destination="hF5-rp-PGh" id="QtR-TX-3rb"/>
+                        <outlet property="topConteiner" destination="6dd-AS-tRf" id="pcf-bN-hap"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9bW-Q1-A0e" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1390" y="373"/>
+        </scene>
+    </scenes>
+</document>
